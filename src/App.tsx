@@ -1,11 +1,15 @@
 import React from 'react';
-import AvailableCars from './components/AvailableCars';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import './App.css';
 
 function App() {
   return (
-    <div>
-      <AvailableCars />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
